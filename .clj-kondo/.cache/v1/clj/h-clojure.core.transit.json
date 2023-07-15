@@ -1,0 +1,1 @@
+["^ ","~$say-hi",["^ ","~:row",10,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$h-clojure.core","~:top-ns","~$hello-clojure.core","~:arities",["^ ","~i1",["^ ","~:ret","~:string","~:arglist-str","[name]"]],"~:type","~:fn"],"~:filename","/home/mike/Projects/hello-clojure/src/hello_clojure/core.clj"]
