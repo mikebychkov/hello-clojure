@@ -23,20 +23,50 @@
     (take-nth 4 board)
     (take-nth 2 (drop-last 2 (drop 2 board))))))
 
-;; Just me learning about the code ((
+(defn full-board? [board]
+  (every? #{:x :o} board))
 
-(def x [1 2 3 :x :x :x 7 8 9])
-(def y [1 2 3 4 5 6 7 8 9])
+(declare player-name)
 
-(partition-all 3 x)
-(triples x)
+(defn print-board [board]
+  (let [board (map #(if (keyword? %) (player-name %) %) board)]
+    (println (nth board 0) (nth board 1) (nth board 2))
+    (println (nth board 3) (nth board 4) (nth board 5))
+    (println (nth board 6) (nth board 7) (nth board 8))))
 
-(winner? x)
+(defn player-name [player]
+  (subs (str player) 1))
 
-(map triple-winner? (triples x))
-(filter #{:x :o} (map triple-winner? (triples x)))
-(filter #{:x :o} (map triple-winner? (triples y)))
-(map println (triples x))
+(def starting-board [1 2 3 4 5 6 7 8 9])
 
-;; ))
+(def player-sequence (cycle [:x :o]))
 
+(defn get-move [board]
+  (let [input (try (. Integer parseInt (read-line)) 
+                   (catch Exception e nil))]
+    (if (some #{input} board)
+      input
+      nil)))
+
+(defn take-turn [player board]
+  (println "Select your move player:" (player-name player) "(press 1-9)")
+  (loop [move (get-move board)]
+    (if move
+      (assoc board (dec move) player)
+      (do
+        (println "Move was invalid. Try again:")
+        (recur (get-move board))))))
+
+(defn play-game []
+  (loop [board starting-board player-sequence player-sequence]
+    (let [winner (winner? board)]
+      (println "Current board:")
+      (print-board board)
+      (cond
+        winner (println "Player" (player-name winner) "wins!")
+        (full-board? board) (println "Game is a draw.")
+        :else (recur
+               (take-turn (first player-sequence) board)
+               (rest player-sequence))))))
+
+(play-game)
