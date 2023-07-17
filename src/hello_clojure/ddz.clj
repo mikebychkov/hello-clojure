@@ -32,6 +32,9 @@
       (= winner 2)(println "You win!")
       )))
 
-(loop []
-  (play-hand)
-  (recur))
+(defn play-game [] 
+  (loop []
+     (play-hand)
+     (recur)))
+
+;; (play-game)
