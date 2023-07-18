@@ -7,9 +7,9 @@ https://www.youtube.com/watch?v=9A9qsaZZefw&list=PLAC43CFB134E85266&pp=iAQB - co
 
 Official Clojure references:
 
-https://clojure.org/api/cheatsheet
-https://clojure.org/guides/learn/syntax
-https://clojure.org/reference/special_forms
+https://clojure.org/api/cheatsheet - cheatsheet
+https://clojure.org/guides/learn/syntax - guides
+https://clojure.org/reference/special_forms - language reference
 
 Ring info and examples (author Eugen):
 
