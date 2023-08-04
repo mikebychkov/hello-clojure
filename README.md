@@ -23,3 +23,14 @@ https://github.com/eugenp/tutorials/blob/master/clojure-modules/clojure-ring/src
 ### Ring project repo:
 
 https://github.com/ring-clojure/ring
+
+### Additional resources: 
+
+Channel: https://www.youtube.com/@ClojureTV
+Playlist: https://www.youtube.com/playlist?list=PLZdCLR02grLpIQQkyGLgIyt0eHE56aJqd
+
+Channel: https://www.youtube.com/@FuncProgSweden
+Playlist: https://www.youtube.com/playlist?list=PLq1pyM--m7oC7mMreJLnqsVkkgihI7ANd
+
+Channel: https://www.youtube.com/@onthecodeagain
+Playlist: https://www.youtube.com/playlist?list=PLqunUpREWrwKdi3DEkTnIia54JjnWk8JB
