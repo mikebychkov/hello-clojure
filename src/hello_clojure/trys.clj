@@ -149,3 +149,15 @@
 ;; 
 
 ;; (clojure.pprint/pprint (meta #'+))
+
+;;
+
+;; FIXING NESTED FUNCTIONS
+
+;; REGULAR
+(filter odd? (map inc (range 5)))
+
+;; STREAM LIKE WITH "->>" - "TREAD LAST" MACRO
+(->> (range 5)
+     (map inc)
+     (filter odd?))
